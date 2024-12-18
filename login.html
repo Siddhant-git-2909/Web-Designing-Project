@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Hunter Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-wrapper">
+            <div class="login-header">
+                <div class="login-logo">
+                    <img src="logo.png" alt="Job Board Logo">
+                </div>
+                <h1 class="site-title">JOB HUNTER</h1>
+            </div>
+            
+            <div class="login-box">
+                <h2>Welcome Back</h2>
+                <p class="subtitle">Log in to access your job board account</p>
+                
+                <form class="login-form" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" name="remember">
+                            Remember me
+                        </label>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    
+                    <button type="submit" class="login-button">Log In</button>
+                </form>
+                
+                <p class="signup-link">
+                    Don't have an account? <a href="#">Sign up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Get form values
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Here you would typically validate credentials with your backend
+            // For now, we'll just redirect to home page
+            
+            // Redirect to home page
+            window.location.href = 'home.html';
+        }
+    </script>
+</body>
+</html> 

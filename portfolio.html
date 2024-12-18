@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Job Hunter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo.png" alt="Job Hunter Logo">
+                <span>JobHunter</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="job-listings.html">Job Listings</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="login.html" class="login-btn">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="portfolio-container">
+        <!-- Profile Overview Section First -->
+        <section class="profile-view-section">
+            <h2>Profile Overview</h2>
+            
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="profile-cover">
+                    <img src="cover-image.jpg" alt="Profile Cover Image">
+                    <button class="edit-cover">
+                        <i class="fas fa-camera"></i>
+                        Change Cover
+                    </button>
+                </div>
+                <div class="profile-info">
+                    <div class="profile-picture">
+                        <img src="default-avatar.png" alt="Profile Picture">
+                        <button class="edit-picture">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="profile-details">
+                        <h1>Arjun Singh</h1>
+                        <p class="profile-title">Senior Software Engineer</p>
+                        <p class="profile-location"><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Content -->
+            <div class="profile-content">
+                <div class="profile-section">
+                    <h3>About Me</h3>
+                    <p>Experienced software engineer with a passion for building scalable applications and solving complex problems.</p>
+                </div>
+
+                <div class="profile-section">
+                    <h3>Experience</h3>
+                    <div class="experience-item">
+                        <h4>Senior Software Engineer</h4>
+                        <p class="company">Google</p>
+                        <p class="duration">2020 - Present</p>
+                        <p>Leading development of cloud-based solutions and mentoring junior developers.</p>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h3>Education</h3>
+                    <div class="education-item">
+                        <h4>Master of Computer Science</h4>
+                        <p class="institution">Delhi University</p>
+                        <p class="duration">2018 - 2020</p>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h3>Skills</h3>
+                    <div class="skills-container">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">AWS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Create Profile Section Second -->
+        <section class="resume-section">
+            <h1>Create Your Professional Profile</h1>
+            <p class="section-desc">Build your career profile and let employers find you</p>
+
+            <form class="resume-form">
+                <!-- Personal Information -->
+                <div class="form-section">
+                    <h2><i class="fas fa-user"></i> Personal Information</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">Full Name*</label>
+                            <input type="text" id="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number*</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location*</label>
+                            <input type="text" id="location" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Summary -->
+                <div class="form-section">
+                    <h2><i class="fas fa-briefcase"></i> Professional Summary</h2>
+                    <div class="form-group">
+                        <label for="summary">Career Objective</label>
+                        <textarea id="summary" rows="4"></textarea>
+                    </div>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="form-section">
+                    <h2><i class="fas fa-history"></i> Work Experience</h2>
+                    <div class="experience-container" id="experienceContainer">
+                        <div class="experience-entry">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Company Name*</label>
+                                    <input type="text" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Job Title*</label>
+                                    <input type="text" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Start Date*</label>
+                                    <input type="date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>End Date</label>
+                                    <input type="date">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Job Description</label>
+                                <textarea rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="add-more-btn" onclick="addExperience()">
+                        <i class="fas fa-plus"></i> Add More Experience
+                    </button>
+                </div>
+
+                <!-- Education -->
+                <div class="form-section">
+                    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                    <div class="education-container" id="educationContainer">
+                        <div class="education-entry">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label>Institution Name*</label>
+                                    <input type="text" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Degree*</label>
+                                    <input type="text" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Field of Study*</label>
+                                    <input type="text" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Graduation Year*</label>
+                                    <input type="number" min="1900" max="2099" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="add-more-btn" onclick="addEducation()">
+                        <i class="fas fa-plus"></i> Add More Education
+                    </button>
+                </div>
+
+                <!-- Skills -->
+                <div class="form-section">
+                    <h2><i class="fas fa-tools"></i> Skills</h2>
+                    <div class="form-group">
+                        <label>Skills (separate with commas)*</label>
+                        <textarea id="skills" rows="3" placeholder="e.g., JavaScript, Python, Project Management" required></textarea>
+                    </div>
+                </div>
+
+                <!-- Resume Upload -->
+                <div class="form-section">
+                    <h2><i class="fas fa-file-upload"></i> Upload Resume</h2>
+                    <div class="upload-container">
+                        <input type="file" id="resumeFile" accept=".pdf,.doc,.docx" hidden>
+                        <label for="resumeFile" class="upload-area">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <span>Drag & Drop your resume or Click to Browse</span>
+                            <span class="file-support">Supports PDF, DOC, DOCX (Max 5MB)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-submit">
+                    <button type="submit" class="submit-btn">Create Profile</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Job Hunter Logo">
+                    <span>Job Hunter</span>
+                </div>
+                <p>Connecting talented professionals with outstanding opportunities worldwide.</p>
+                <div class="social-links">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="job-listings.html">Find Jobs</a></li>
+                    <li><a href="#">Post a Job</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>For Job Seekers</h4>
+                <ul>
+                    <li><a href="#">Create Account</a></li>
+                    <li><a href="#">Browse Jobs</a></li>
+                    <li><a href="#">Career Tips</a></li>
+                    <li><a href="#">Resume Builder</a></li>
+                    <li><a href="#">Job Alerts</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>For Employers</h4>
+                <ul>
+                    <li><a href="#">Post Jobs</a></li>
+                    <li><a href="#">Browse Resumes</a></li>
+                    <li><a href="#">Recruiting Solutions</a></li>
+                    <li><a href="#">Pricing Plans</a></li>
+                    <li><a href="#">Enterprise Solutions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> 42, Connaught Place, New Delhi 110001</li>
+                    <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                    <li><i class="fas fa-envelope"></i> support@jobhunter.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2024 JobBoard. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

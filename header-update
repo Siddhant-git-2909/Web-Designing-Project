@@ -1,0 +1,13 @@
+<!-- Update the nav section in all pages -->
+<nav class="main-nav">
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="job-listings.html">Job Listings</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="profile.html" class="profile-icon-btn">
+            <i class="fas fa-user-circle"></i>
+        </a></li>
+        <li><a href="login.html" class="login-btn">Login</a></li>
+    </ul>
+</nav> 
